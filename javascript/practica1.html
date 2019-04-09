@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let numero1 = parseInt(prompt("Escriba un numero"));
+    let numero2 = parseInt(prompt("Escriba un segundo numero"));
+
+    let pares = 0;
+    let impares = 0;
+    let total = 0;
+    let cadena = "";
+        if(numero1 > numero2)
+        {
+           for(let i = numero2; i <= numero1;i++)
+           {
+                //console.log(i);
+                cadena=cadena+ " "+ i;
+                if(i % 2 == 0){pares++;}else{impares++;}
+                total = total + i;
+           }
+           document.write("pares" + pares + "<br>")
+           document.write("impares" + impares)
+           alert("Total" + total);
+        }
+        else
+        {
+            for(let i = numero1; i <= numero2;i++)
+           {
+                //console.log(i);
+                cadena=cadena+ " "+i;
+                if(i % 2 == 0){pares++;}else{impares++;}
+                total = total + i;
+           }
+           document.write("pares" + pares + "<br>");
+           document.write("impares" + impares);
+           alert("TOTAL" + total);
+        }
+        console.log("Linea de numeros:" + cadena);
+    </script>
+</body>
+</html>
