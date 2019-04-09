@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function multi(num1,num2)
+        {
+            let suma = num1 * num2;
+            return suma;
+        }
+    let numero1 = parseInt(prompt("Primer numero"));
+    let numero2 = parseInt(prompt("Segundo numero"));
+
+    let menor = 0;
+    let mayor = 0;
+
+    if((numero1 > 10 || numero1 < 1) || (numero2 > 10 || numero2 < 1))
+    {
+        alert("Numero minimo 1 numero maximo 10");
+    }
+    else
+    {
+        if(numero1 > numero2)
+        {
+            menor = numero2;
+            mayor = numero1;
+        }
+        else
+        {
+            menor = numero1;
+            mayor = numero2;
+        }
+        document.write("<table border='1'>");
+        for(let i = 1; i <= mayor; i++)
+        {
+            document.write("<tr>");
+            document.write("<td> "+menor + "*"+ i +" </td><td> = </td><td> " + (multi(menor,i)));
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    }
+
+    </script>
+</body>
+</html>
