@@ -7,18 +7,25 @@
     <title>Document</title>
 </head>
 <body>
+
+    <span id='res'></span>
+    <p>
+        <a href="http://www.google.es">Google</a>
+        <a href="http://www.google.es">Google</a>
+    </p>
+    <p>
+        <a href="http://www.google.es">Google</a>
+    </p>
+    <p>
+        <a href="http://www.google.es">Google</a>
+    </p>
     <script>
     'use strict'
-        parrafos 3
-        enlaces 4
-        enlances primer parafo
-
-        parafos enlaces 2 1 1
-
-
-    numero total de parafos 
-    numero total de enlaces
-    numero total de enlaces en primef parafo
+    let parrafos = document.getElementsByTagName('p');
+    let enlaces = document.getElementsByTagName('a');
+    console.log("Total numero de parrafos: " + parrafos.length); 
+    console.log("Total numero de enlaces: " + enlaces.length);
+    console.log("Total numero de enlaces en parrafo 1: " + parrafos[0].getElementsByTagName('a').length)  
     </script>
 </body>
 </html>
