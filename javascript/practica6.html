@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li id="frstListElement">Element 1</li>
+        <li >Element 2</li>
+        <li >Element 3</li>
+    </ul>
+
+    <script>
+    'use strict'
+    let padre = document.getElementsByTagName('ul')[0];
+
+    let li3 = padre.children[2];
+
+    let newLi = document.createElement('li');
+
+    let newNode = document.createTextNode("nuevo");
+
+    newLi.appendChild(newNode);
+
+    padre.insertBefore(li3, newLi);
+
+    </script>
+</body>
+</html>

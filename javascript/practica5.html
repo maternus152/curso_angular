@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS example</title>
+</head>
+<body>
+    <div id="div1">
+        <p>
+            <a class="normalLink" href="hello.html" title="hello world">Hello World</a>
+            <a class="normalLink" href="bye.html" title="bye world">Bye World</a>
+            <a class="specialLink" href="helloagain.html" title="hello again">Again World</a>
+        </p>
+    </div>
+    <script>
+    'use strict'
+    console.log(document.querySelector("title").text);
+    let enlaces = document.querySelectorAll("a[title$='world']");
+    enlaces.forEach(function(enlace){
+        console.log(enlace.title);
+    });
+
+    </script>
+</body>
+</html>

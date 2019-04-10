@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="encabezado" id="encabezadoFactura">
+        <label class="nombre">Luis Martinez Gonzalez</label>
+        <label class="telefono">95545451545</label>
+        <label class="numeroFactura">1250</label>
+    </div>
+    <script>
+    'use strict'
+    document.getElementById('encabezadoFactura').classList.remove('encabezado');
+    document.getElementById('encabezadoFactura').classList.add('resalta');
+
+    function recalcula()
+    {
+        let padre = document.getElementById('encabezadoFactura');
+
+        let nrFactura = padre.getElementsByTagName('label')[2].innerHTML;
+
+        nrFactura = parseInt(nrFactura) + 1;
+
+        padre.getElementsByTagName('label')[2].innerHTML = nrFactura;
+
+    }
+    recalcula();
+    </script>
+</body>
+</html>
